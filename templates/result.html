@@ -1,0 +1,12 @@
+
+<form action="/download" method="post">
+          Location:    <input type="text" name="lname" id="lname"><br/>
+          <br>Enter to see result<br/>
+        </form>
+
+{% for key,value in display.items() %}
+	
+	<p>{{ key }}  {{ value }}<p> 
+		
+{% endfor %}
+
