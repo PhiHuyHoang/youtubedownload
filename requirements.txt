@@ -1,3 +1,5 @@
 flask==1.0.2
 gunicorn
 requests==2.18.4
+youtube_dl
+bs4

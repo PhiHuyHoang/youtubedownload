@@ -1,12 +1,31 @@
-
-<form action="/download" method="post">
-          Location:    <input type="text" name="lname" id="lname"><br/>
-          <br>Enter to see result<br/>
+<!DOCTYPE html>
+<html>
+<head>
+<!<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+</head>
+<body>
+<form action="/webhook" method="post">
+          Search:    <input type="text" name="lname" id="lname"><button type = "submit">Submit</button>
         </form>
+		</tr>
+		</tr>
+		</p>
+<form action="/download" method="post">
+<table style="width:100%">
 
 {% for key,value in display.items() %}
-	
-	<p>{{ key }}  {{ value }}<p> 
-		
-{% endfor %}
-
+	<td>
+	<div><img src={{value[0]}} alt={{key}} width="200" height="100" class ="img"></div> 
+</td>
+<td>
+<h2>{{ key }}</h2> <div class = "description">{{value[1]}}</p>
+<td><button name = "song" value={{value[2]}} type = "submit"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-6-3/48/251-512.png" alt="Record button" width="50" height="50"></button>
+</td>
+</td>
+</tr>
+	{% endfor %}
+</table>
+</form>
+</body>
+</html>
