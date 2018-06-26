@@ -1,18 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="icon" href="https://cdn3.iconfinder.com/data/icons/food-drink/512/Coffee_B-512.png"/>
+<title>Coffee and Music</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	color: white;
+}
+
+table,th
+{
+width:100%; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #968ebd;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+form.example1 button {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    background: #000000;
+    color: white;
+    font-size: 17px;
+    border: 0px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+.button1 {
+    width: 0%;
+    padding: 10px;
+    background: #000000;
+    color: white;
+    font-size: 17px;
+    border: 0px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+</style>
   </head>
-</head>
-<body>
-<form action="/webhook" method="post">
-          Search:    <input type="text" name="lname" id="lname"><button type = "submit">Submit</button>
-        </form>
+<body bgcolor="#000000" class="centered-wrapper">
+<form class = "example" action="/webhook" method="post">
+          <input type="text"  name="lname" id="lname" placeholder = "Put some words or youtube url..">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
 		</tr>
 		</tr>
 		</p>
-<form action="/download" method="post">
-<table style="width:100%">
+		<p>Press the button to get the MP3 file <button class = "button button1" name = "song"><img src="http://www.clker.com/cliparts/d/b/c/f/13652249372108434179Record%20Button%20Microphone.svg.med.png" alt="Record button" width="20" height="20"></button></p>
+<form class = "example1" action="/download" method="post">
+<table>
 
 {% for key,value in display.items() %}
 	<td>
@@ -20,7 +96,7 @@
 </td>
 <td>
 <h2>{{ key }}</h2> <div class = "description">{{value[1]}}</p>
-<td><button name = "song" value={{value[2]}} type = "submit"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-6-3/48/251-512.png" alt="Record button" width="50" height="50"></button>
+<td><button name = "song" value={{value[2]}} type = "submit"><img src="http://www.clker.com/cliparts/d/b/c/f/13652249372108434179Record%20Button%20Microphone.svg.med.png" alt="Record button" width="50" height="50"></button>
 </td>
 </td>
 </tr>
@@ -28,4 +104,7 @@
 </table>
 </form>
 </body>
+<footer>
+<p class="copyright" align = "center"><font color="white">Copyright © 2018 with <i class="fa fa-heart"></i> by Bohemian Guy! Follow him on <a href="https://chomottachcoffee.wordpress.com" target="_blank">Bohemian Guy</a></p>
+</footer>
 </html>
