@@ -20,7 +20,7 @@ def main():
     return render_template('index.html',year = year)
 
 
-@app.route('/result', methods=['GET'])
+@app.route('/result', methods=['POST','GET'])
 def result():
 	search = request.form['search']
 	query_string = urllib.parse.urlencode({"search_query": search})
