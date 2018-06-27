@@ -41,7 +41,7 @@ def result():
 		display[vid.find("a")["title"]] = [thumbnail,des,link]
 	return render_template('result.html', display = display,year = year)
 
-@app.route('/download', methods=['POST','GET'])
+@app.route('/download', methods=['POST'])
 def download():
 	url = request.form["song"]
 	options = {
@@ -69,5 +69,4 @@ def download():
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 8000))
     print("Starting app on port %d" % port)
-
-app.run(debug=False, port=port, host='0.0.0.0')
+	app.run(debug=False, port=port, host='0.0.0.0')
