@@ -61,7 +61,7 @@ def download():
 		os.rename(result['id'], savepath)
 		print("Downloaded and converted %s successfully!" % savepath)
 		try:
-			return send_from_directory(savepath, attachment_filename=savepath, as_attachment=True)
+			return send_from_directory(savepath,savepath)#, as_attachment=True)
 		except Exception as e:
 			return str(e)
 
