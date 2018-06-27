@@ -41,7 +41,7 @@ def result():
 		display[vid.find("a")["title"]] = [thumbnail,des,link]
 	return render_template('result.html', display = display,year = year)
 
-@app.route('/download', methods=['GET'])
+@app.route('/download', methods=['POST','GET'])
 def download():
 	url = request.form["song"]
 	options = {
