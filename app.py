@@ -6,7 +6,8 @@ import urllib
 from bs4 import BeautifulSoup
 import datetime
 import re
-
+from future.standard_library import install_aliases
+install_aliases()
 
 year = datetime.date.today().year
 
@@ -67,4 +68,7 @@ def download():
 
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.getenv('PORT', 8000))
+    print("Starting app on port %d" % port)
+
+app.run(debug=False, port=port, host='0.0.0.0')
