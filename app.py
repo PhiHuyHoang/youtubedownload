@@ -28,8 +28,8 @@ def result():
 	soup = BeautifulSoup(page.content, 'html.parser')
 	display = {}
 	for vid in soup.find_all(class_="yt-lockup-content"):
-		print(vid.find("a")["href"])
-		print(vid.find("a")["title"])
+		#print(vid.find("a")["href"])
+		#print(vid.find("a")["title"])
 		print(vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2"))
 		if vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2") is not None:
 			des = vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2").get_text()
