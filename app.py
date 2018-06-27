@@ -23,22 +23,25 @@ def main():
 @app.route('/result', methods=['POST','GET'])
 def result():
 	search = request.form['search']
-	query_string = urllib.parse.urlencode({"search_query": search})
-	page = requests.get("http://www.youtube.com/results?" + query_string)
-	soup = BeautifulSoup(page.content, 'html.parser')
-	display = {}
-	for vid in soup.find_all(class_="yt-lockup-content"):
-		print(vid)
-		#print(vid.find("a")["href"])
-		#print(vid.find("a")["title"])
-		print(vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2"))
-		if vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2") is not None:
-			des = vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2").get_text()
-		else:
-			des = " "
-		link = "https://youtube.com"+vid.find("a")["href"]
-		thumbnail = "http://img.youtube.com/vi/%s/0.jpg" % vid.find("a")["href"][9:]
-		display[vid.find("a")["title"]] = [thumbnail,des,link]
+	try:
+		query_string = urllib.parse.urlencode({"search_query": search})
+		page = requests.get("http://www.youtube.com/results?" + query_string)
+		soup = BeautifulSoup(page.content, 'html.parser')
+		display = {}
+		for vid in soup.find_all(class_="yt-lockup-content"):
+			print(vid)
+			#print(vid.find("a")["href"])
+			#print(vid.find("a")["title"])
+			print(vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2"))
+			if vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2") is not None:
+				des = vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2").get_text()
+			else:
+				des = " "
+			link = "https://youtube.com"+vid.find("a")["href"]
+			thumbnail = "http://img.youtube.com/vi/%s/0.jpg" % vid.find("a")["href"][9:]
+			display[vid.find("a")["title"]] = [thumbnail,des,link]
+	except EnvironmentError:
+		print('NO')
 	return render_template('result.html', display = display,year = year)
 
 @app.route('/download', methods=['POST','GET'])
