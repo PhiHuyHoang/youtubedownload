@@ -28,6 +28,7 @@ def result():
 	soup = BeautifulSoup(page.content, 'html.parser')
 	display = {}
 	for vid in soup.find_all(class_="yt-lockup-content"):
+		print(vid)
 		#print(vid.find("a")["href"])
 		#print(vid.find("a")["title"])
 		print(vid.find(class_="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2"))
