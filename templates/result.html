@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" href="https://cdn3.iconfinder.com/data/icons/food-drink/512/Coffee_B-512.png"/>
-<title>Coffee and Music</title>
+<link rel="icon" href="/static/images/hoangicon.png"/>
+<title>Coffee Youtube</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
@@ -15,7 +15,7 @@
 		</tr>
 		</tr>
 		</p>
-		<p>Press the button to get the MP3 file <button class = "button buttondl" name = "song"><img src="http://www.clker.com/cliparts/d/b/c/f/13652249372108434179Record%20Button%20Microphone.svg.med.png" alt="Record button" width="20" height="20"></button></p>
+		<p>Press the button to get the MP3 file <button class = "button buttondl" name = "song"><img src="/static/images/hoangbutton.png" alt="Record button" width="20" height="20"></button></p>
 <form class = "getdownload" action="/download" method="post">
 <table>
 
@@ -25,7 +25,7 @@
 </td>
 <td>
 <h2>{{ key }}</h2> <div class = "description">{{value[1]}}</p>
-<td><button name = "song" value={{value[2]}} type = "submit"><img src="http://www.clker.com/cliparts/d/b/c/f/13652249372108434179Record%20Button%20Microphone.svg.med.png" alt="Record button" width="50" height="50"></button>
+<td><button name = "song" value={{value[2]}} type = "submit"><img src="/static/images/hoangbutton.png" alt="Record button" width="50" height="50"></button>
 </td>
 </td>
 </tr>
@@ -34,6 +34,6 @@
 </form>
 </body>
 <footer>
-<p class="copyright" align = "center"><font color="white">Copyright © {{year}} with <i class="fa fa-heart"></i> by Bohemian Guy! Follow him on <a href="https://chomottachcoffee.wordpress.com" target="_blank">Bohemian Guy</a></p>
+<p class="copyright" align = "center"><font color="white">Copyright © {{year}} with <i class="fa fa-heart"></i> by Bohemian Guy! Follow him on <a href="https://chomottachcoffee.wordpress.com" target="_blank" style = "color:white">Bohemian Guy</a></p>
 </footer>
 </html>
