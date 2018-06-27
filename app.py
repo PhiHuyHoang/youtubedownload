@@ -6,8 +6,6 @@ import urllib
 from bs4 import BeautifulSoup
 import datetime
 import re
-from future.standard_library import install_aliases
-install_aliases()
 
 year = datetime.date.today().year
 
