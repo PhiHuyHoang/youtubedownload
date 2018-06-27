@@ -36,3 +36,8 @@ form.searchbar::after {
     clear: both;
     display: table;
 }
+.sample
+{
+  height: auto;
+  width: 100%;
+}
