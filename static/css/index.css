@@ -36,8 +36,7 @@ form.searchbar::after {
     clear: both;
     display: table;
 }
-.sample
-{
-  height: auto;
-  width: 100%;
+img.sample {
+    width: 100%;
+    height: auto;
 }
