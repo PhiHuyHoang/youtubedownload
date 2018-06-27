@@ -1,7 +1,7 @@
 import json, requests, sys
 import os
 import youtube_dl
-from flask import Flask, render_template, json, request, send_file,request
+from flask import Flask, render_template, json, request, send_from_directory,request
 import urllib
 from bs4 import BeautifulSoup
 import datetime
@@ -61,7 +61,7 @@ def download():
 		os.rename(result['id'], savepath)
 		print("Downloaded and converted %s successfully!" % savepath)
 		try:
-			return send_file(savepath, attachment_filename=savepath, as_attachment=True)
+			return send_from_directory(savepath, attachment_filename=savepath, as_attachment=True)
 		except Exception as e:
 			return str(e)
 
