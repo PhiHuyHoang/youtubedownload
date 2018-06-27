@@ -1,25 +1,29 @@
 import json, requests, sys
-import json
 import os
 import youtube_dl
-from flask import Flask, render_template, json, request, send_file
-from flask import request
+from flask import Flask, render_template, json, request, send_file,request
 import urllib
 from bs4 import BeautifulSoup
+import datetime
+import re
+
+
+year = datetime.date.today().year
+
 # Flask app should start in global layout
 app = Flask(__name__)
-import re
+
 def make_savepath(title):
     return os.path.join("%s.mp3" % (title))
 
 @app.route('/', methods=['GET'])
 def main():
-    return render_template('index.html')
+    return render_template('index.html',year = year)
 
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-	search = request.form['lname']
+@app.route('/result', methods=['POST'])
+def result():
+	search = request.form['search']
 	query_string = urllib.parse.urlencode({"search_query": search})
 	page = requests.get("http://www.youtube.com/results?" + query_string)
 	soup = BeautifulSoup(page.content, 'html.parser')
@@ -35,7 +39,7 @@ def webhook():
 		link = "https://youtube.com"+vid.find("a")["href"]
 		thumbnail = "http://img.youtube.com/vi/%s/0.jpg" % vid.find("a")["href"][9:]
 		display[vid.find("a")["title"]] = [thumbnail,des,link]
-	return render_template('result.html', display = display )
+	return render_template('result.html', display = display,year = year)
 
 @app.route('/download', methods=['POST'])
 def download():

@@ -5,52 +5,7 @@
 <title>Coffee and Music</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-	font-size: 12px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-}
-
-form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #000000;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
-
-form.example button:hover {
-    background: #0b7dda;
-}
-
-form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body bgcolor = "#6f4e37" class="centered-wrapper">
 </br>
@@ -60,12 +15,12 @@ form.example::after {
 </br>
 </br>
 <h2 align = "center"><font color="white">Youtube  To  MP3  With  COFFEE</h2>
-<form class = "example" action="/webhook" method="post" style="margin:auto;max-width:500px">
-  <input type="text"  name="lname" id="lname" placeholder = "Put some words or youtube url..">
+<form class = "searchbar" action="/result" method="post" style="margin:auto;max-width:500px">
+  <input type="text"  name="search" id="search" placeholder = "Put some words or youtube url..">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 </body>
 <footer>
-<p class="copyright" align = "center"><font color="white">Copyright © 2018 with <i class="fa fa-heart"></i> by Bohemian Guy! Follow him on <a href="https://chomottachcoffee.wordpress.com" target="_blank">Bohemian Guy</a></p>
+<p class="copyright" align = "center"><font color="white">Copyright © {{year}} with <i class="fa fa-heart"></i> by Bohemian Guy! Follow him on <a href="https://chomottachcoffee.wordpress.com" target="_blank">Bohemian Guy</a></p>
 </footer>
 </html> 
