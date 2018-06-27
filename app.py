@@ -20,7 +20,7 @@ def main():
     return render_template('index.html',year = year)
 
 
-@app.route('/result', methods=['POST'])
+@app.route('/result', methods=['GET'])
 def result():
 	search = request.form['search']
 	query_string = urllib.parse.urlencode({"search_query": search})
@@ -41,7 +41,7 @@ def result():
 		display[vid.find("a")["title"]] = [thumbnail,des,link]
 	return render_template('result.html', display = display,year = year)
 
-@app.route('/download', methods=['POST'])
+@app.route('/download', methods=['GET'])
 def download():
 	url = request.form["song"]
 	options = {
