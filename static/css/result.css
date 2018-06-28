@@ -68,4 +68,6 @@ form.getdownload button {
     border-left: none;
     cursor: pointer;
 }
-
+input[type=submit]:hover {
+    text-decoration:underline;
+}
