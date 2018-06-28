@@ -21,8 +21,11 @@
 
 {% for key,value in display.items() %}
 	<td>
-	<div><img src={{value[0]}} alt={{key}} width="200" height="100" class ="img"></div> 
-</td>
+	<div>
+	<button name = "song" value={{value[2]}} type = "submit"
+><img src={{value[0]}} alt={{key}} width="200" height="100" class ="img"></div> 
+</button>
+	</td>
 <td>
 <h2>
 <button name = "song" value={{value[2]}} type = "submit"
