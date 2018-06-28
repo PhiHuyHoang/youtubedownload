@@ -47,17 +47,7 @@ form.searchbar::after {
     clear: both;
     display: table;
 }
-form.getdownload button {
-    float: left;
-    width: 100%;
-    padding: 10px;
-    background: #6f4e37;
-    color: white;
-    font-size: 25px;
-    border: 0px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
+
 
 form.getdownload button:hover {
     text-decoration:underline;
