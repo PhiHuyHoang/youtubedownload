@@ -15,10 +15,14 @@
 		</tr>
 		</tr>
 		</p>
-		<form action = "/index">
-		<p>Press the link, relax, drink a cup of coffee and your MP3 file will be ready! ~ <button class = "button buttondl"><img src="/static/images/hoangbutton.png" alt="Record button" width="20" height="20"></button></p>
-		</form>
-<form class = "getdownload" action="/download" method="post">
+		<p>Press the link, relax, drink a cup of coffee and your MP3 file will be ready! ~ <button  id = "fun" class = "button buttondl" onclick = "change()"><img src="/static/images/hoangbutton.png" alt="Record button" width="20" height="20"></button></p>
+<script>
+function change() {
+    document.getElementById("fun").innerHTML = "YOU CLICKED ME!";
+}
+</script>
+		
+		<form class = "getdownload" action="/download" method="post">
 <table>
 
 {% for key,value in display.items() %}
