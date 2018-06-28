@@ -15,7 +15,7 @@
 		</tr>
 		</tr>
 		</p>
-		<p>Press the button, relax, drink a cup of coffee and your MP3 file will be ready! ~ <button class = "button buttondl" name = "song"><img src="/static/images/hoangbutton.png" alt="Record button" width="20" height="20"></button></p>
+		<p>Press the link, relax, drink a cup of coffee and your MP3 file will be ready! ~ <button class = "button buttondl" name = "song"><img src="/static/images/hoangbutton.png" alt="Record button" width="20" height="20"></button></p>
 <form class = "getdownload" action="/download" method="post">
 <table>
 
@@ -29,8 +29,8 @@
 >{{ key }}</button>
 </h2>
 <div class = "description">{{value[1]}}</p>
-<td><button name = "song" value={{value[2]}} type = "submit"><img src="/static/images/hoangbutton.png" alt="Record button" width="50" height="50"></button>
-</td>
+<!--<td><button name = "song" value={{value[2]}} type = "submit"><img src="/static/images/hoangbutton.png" alt="Record button" width="50" height="50"></button>
+</td>-->
 </td>
 </tr>
 	{% endfor %}
