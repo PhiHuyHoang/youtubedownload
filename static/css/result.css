@@ -58,16 +58,7 @@ form.getdownload button {
     border-left: none;
     cursor: pointer;
 }
-.buttondl {
-    width: 0%;
-    padding: 10px;
-    background: #6f4e37;
-    color: white;
-    font-size: 17px;
-    border: 0px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
-form.getdownload button :hover {
+
+form.getdownload button:hover {
     text-decoration:underline;
 }
