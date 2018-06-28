@@ -40,3 +40,28 @@ img.sample {
     width: 100%;
     height: auto;
 }
+
+form.searchbar button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #000000;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+.bgmusic
+{
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #6f4e37;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
