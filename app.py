@@ -39,7 +39,6 @@ def result():
 				des = " "
 			link = "https://youtube.com"+vid.find("a")["href"]
 			thumbnail = "http://img.youtube.com/vi/%s/0.jpg" % vid.find("a")["href"][9:]
-			url = request.form["song"]
 			options = {
 				'format': 'bestaudio/best',  # choice of quality
 				'extractaudio': True,  # only keep the audio
