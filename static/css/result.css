@@ -68,3 +68,11 @@ form.getdownload button {
     border-left: none;
     cursor: pointer;
 }
+
+.linkButton { 
+     background: none;
+     border: none;
+     color: #ffffff;
+     text-decoration: underline;
+     cursor: pointer; 
+}
