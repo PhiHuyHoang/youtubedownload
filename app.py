@@ -47,7 +47,7 @@ def result():
 				'noplaylist': True, }  # only download single song, not playlist
 
 			ydl = youtube_dl.YoutubeDL(options)
-			song_name = ydl.extract_info(url, download=False)
+			song_name = ydl.extract_info(link, download=False)
 			savepath = make_savepath(song_name['title'].replace(" ", ""))
 			savepath = re.sub('[^A-Za-z0-9]+', '', savepath)
 			savepath = make_savepath((savepath))
