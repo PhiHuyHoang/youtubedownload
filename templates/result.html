@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
   </head>
 <body bgcolor="#6f4e37" class="centered-wrapper" width = "device-width">
-<form class = "searchbar" action="/result" method="post">
+<form class = "searchbar" action="/result" method="post"  style="margin:auto;max-width:500px">
           <input type="text"  name="search" id="search" placeholder = "Put some words or youtube url..">
   <button type="submit"><i class="fa fa-search"></i></button>
   </form>
@@ -17,7 +17,7 @@
 		</p>
 		<p>Press the button, relax, drink a cup of coffee and your MP3 file will be ready! ~ <button class = "button buttondl" name = "song"><img src="/static/images/hoangbutton.png" alt="Record button" width="20" height="20"></button></p>
 <form class = "getdownload" action="/download" method="post">
-<table>
+<table width = "device-width">
 
 {% for key,value in display.items() %}
 	<td>
