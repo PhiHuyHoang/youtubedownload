@@ -5,10 +5,18 @@ body {
 	font-variant: normal;
 	font-weight: 500;
 	line-height: 26.4px;
+	color: white;
 }
+
+table,th
+{
+width:100%; 
+}
+
 * {
     box-sizing: border-box;
 }
+
 form.searchbar input[type=text] {
     padding: 10px;
     font-size: 17px;
@@ -17,6 +25,7 @@ form.searchbar input[type=text] {
     width: 80%;
     background: #f1f1f1;
 }
+
 form.searchbar button {
     float: left;
     width: 20%;
@@ -28,29 +37,37 @@ form.searchbar button {
     border-left: none;
     cursor: pointer;
 }
+
 form.searchbar button:hover {
     background: #0b7dda;
 }
+
 form.searchbar::after {
     content: "";
     clear: both;
     display: table;
 }
-img.sample {
-    width: 100%;
-    height: auto;
-}
-
-form.searchbar button {
+form.getdownload button {
     float: left;
-    width: 20%;
+    width: 100%;
     padding: 10px;
-    background: #000000;
+    background: #6f4e37;
     color: white;
-    font-size: 17px;
-    border: 1px solid grey;
+    font-size: 25px;
+    border: 0px solid grey;
     border-left: none;
     cursor: pointer;
 }
-
-
+.buttondl {
+    width: 0%;
+    padding: 10px;
+    background: #6f4e37;
+    color: white;
+    font-size: 17px;
+    border: 0px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    text-decoration:underline;
+}
