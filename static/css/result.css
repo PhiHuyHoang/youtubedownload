@@ -57,7 +57,19 @@ form.getdownload button {
     border: 0px solid grey;
     border-left: none;
     cursor: pointer;
+	font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", "monospace";
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	text-align:left;
 }
+
+form.getdownload button	:hover {
+    text-decoration:underline;
+}
+
 .buttondl {
     width: 0%;
     padding: 10px;
