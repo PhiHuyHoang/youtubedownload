@@ -37,8 +37,17 @@ form.searchbar::after {
     clear: both;
     display: table;
 }
-
-
-form.getdownload button:hover {
+form.getdownload input[type=submit]:hover {
+	font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", "monospace";
+	 font-size: 24px;
+	 font-style: normal;
+	 font-variant: normal;
+	 font-weight: 500;
+	 line-height: 26.4px;
+	 color: white;
+     cursor:pointer;
+	 text-align:left;
+}
+form.getdownload input[type=submit]:hover {
     text-decoration:underline;
 }
