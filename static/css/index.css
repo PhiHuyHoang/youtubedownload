@@ -52,16 +52,3 @@ form.searchbar button {
     border-left: none;
     cursor: pointer;
 }
-
-.bgmusic
-{
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #6f4e37;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
