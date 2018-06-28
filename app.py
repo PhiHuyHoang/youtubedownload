@@ -39,10 +39,7 @@ def result():
 				des = " "
 			link = "https://youtube.com"+vid.find("a")["href"]
 			thumbnail = "http://img.youtube.com/vi/%s/0.jpg" % vid.find("a")["href"][9:]
-			savepath = make_savepath(vid.find("a")["title"].replace(" ", ""))
-			savepath = re.sub('[^A-Za-z0-9]+', '', savepath)
-			savepath = make_savepath((savepath))
-			display[vid.find("a")["title"]] = [thumbnail,des,savepath]
+			display[vid.find("a")["title"]] = [thumbnail,des,link]
 	except EnvironmentError:
 		print('NO')
 	return render_template('result.html', display = display,year = year)
