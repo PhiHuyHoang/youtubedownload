@@ -39,7 +39,20 @@ def result():
 				des = " "
 			link = "https://youtube.com"+vid.find("a")["href"]
 			thumbnail = "http://img.youtube.com/vi/%s/0.jpg" % vid.find("a")["href"][9:]
-			display[vid.find("a")["title"]] = [thumbnail,des,link]
+			url = request.form["song"]
+			options = {
+				'format': 'bestaudio/best',  # choice of quality
+				'extractaudio': True,  # only keep the audio
+				'audioformat': "mp3",  # convert to mp3
+				'outtmpl': '%(id)s',  # name the file the ID of the video
+				'noplaylist': True, }  # only download single song, not playlist
+
+			ydl = youtube_dl.YoutubeDL(options)
+			song_name = ydl.extract_info(url, download=False)
+			savepath = make_savepath(song_name['title'].replace(" ", ""))
+			savepath = re.sub('[^A-Za-z0-9]+', '', savepath)
+			savepath = make_savepath((savepath))
+			display[vid.find("a")["title"]] = [thumbnail,des,savepath]
 	except EnvironmentError:
 		print('NO')
 	return render_template('result.html', display = display,year = year)
