@@ -25,7 +25,13 @@
 </td>
 <td>
 <h2>
-<a href="javascript:{}" style="color:white" onclick="document.getElementById('my_form').submit(); return false;"name = "song" value={{value[2]}}>{{ key }} </a>
+<button name = "song" value={{value[2]}} type = "submit" style = "background:none!important;
+     border:none; 
+     padding:0!important;
+     color:white;
+     text-decoration:underline;
+     cursor:pointer;
+">{{ key }}</button>
 </h2>
 <div class = "description">{{value[1]}}</p>
 <td><button name = "song" value={{value[2]}} type = "submit"><img src="/static/images/hoangbutton.png" alt="Record button" width="50" height="50"></button>
