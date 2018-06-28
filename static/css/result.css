@@ -26,17 +26,7 @@ form.searchbar input[type=text] {
     background: #f1f1f1;
 }
 
-form.searchbar button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #000000;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
+
 
 form.searchbar button:hover {
     background: #0b7dda;
