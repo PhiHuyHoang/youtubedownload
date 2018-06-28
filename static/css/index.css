@@ -53,7 +53,7 @@ form.searchbar button {
     cursor: pointer;
 }
 
-form.getdownload input[type=submit]:hover {
+form.getdownload input[type=submit] {
 	font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", "monospace";
 	 font-size: 24px;
 	 font-style: normal;
