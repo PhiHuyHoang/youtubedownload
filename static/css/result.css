@@ -1,0 +1,73 @@
+body {
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	color: white;
+}
+
+table,th
+{
+width:100%; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form.searchbar input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.searchbar button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #000000;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.searchbar button:hover {
+    background: #0b7dda;
+}
+
+form.searchbar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+form.getdownload button {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    background: #6f4e37;
+    color: white;
+    font-size: 25px;
+    border: 0px solid grey;
+    border-left: none;
+    cursor: pointer;
+	font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", "monospace";
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	text-align:left;
+}
+
+form.getdownload button	:hover {
+    text-decoration:underline;
+}
+
+
