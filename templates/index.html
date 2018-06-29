@@ -10,20 +10,19 @@
 <body bgcolor = "#6f4e37" class="centered-wrapper" width = "device-width">
 <h2 align = "center"><font color="white">Youtube  To  MP3  With  Coffee  and  Bohemian Guy</h2>
 <form class = "searchbar" action="/result" method="post" style="margin:auto;max-width:500px">
-  <input type="text" datalist = "languageList" name="search" id="search" placeholder = "Put some words or youtube url..">
-    <datalist id="languageList">
-<option value="HTML" />
-<option value="CSS" />
-<option value="JavaScript" />
-<option value="SQL" />
-<option value="PHP" />
-<option value="jQuery" />
-<option value="Bootstrap" />
-<option value="Angular" />
-<option value="ASP.NET" />
-<option value="XML" />
-</datalist>
+  <input type="text" name="search" id="search" placeholder = "Put some words or youtube url..">
   <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<form action="/action_page.php" method="get">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
 </form>
 <div class="text-center" align = "center" > <i class="fa fa-youtube"></i>   G e t F o r F u n </div>
 
