@@ -22,7 +22,7 @@ def main():
 	response = requests.get(URL, headers=headers)
 	result = json.loads(response.content.decode('utf-8'))
 	suggest = result[1]
-    return render_template('index.html',year = year,suggest = suggest)
+	return render_template('index.html',year = year,suggest = suggest)
 
 
 @app.route('/result', methods=['POST','GET'])
