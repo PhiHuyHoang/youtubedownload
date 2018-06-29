@@ -16,8 +16,8 @@
 <form action="/action_page.php" method="get">
   <input list="browsers" name="browser">
   <datalist id="browsers">
-	{% for value in suggest: %}
-		<option value={{value}}>
+	{% for nice in {{suggest}}: %}
+		<option value={{nice}}>
 	{% endfor %}
   </datalist>
   <input type="submit">
