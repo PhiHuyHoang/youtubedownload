@@ -52,3 +52,17 @@ form.searchbar button {
     border-left: none;
     cursor: pointer;
 }
+
+a{
+  text-decoration:none;
+}
+#main{
+  border:1px solid black;
+  width:400px;
+  height:100px;
+  margin:auto;
+}
+p{
+  text-align:center;
+  font-size:20px;
+}
