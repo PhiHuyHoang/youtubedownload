@@ -13,12 +13,26 @@
   <input type="text" name="search" id="search" placeholder = "Put some words or youtube url..">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
+
 <div id="main">
 <p>
 <a href="http://www.justwebcode.com" rel="index,follow">Just Web Code (www.justwebcode.com)</a>
 </p>
 &nbsp;Enter any Sport Name: <input type="text" id="autocomplete" />
-<script src="/static/js/autocomplete.js"></script>
+</div>
+
+<script 
+
+$(function(){
+var games = ["Baseball","Tennis","Golf","Cricket","Football","Hockey","Badminton","Volleyball","Boxing","Kabaddi","Chess","Long Jump","High Jump","Racing","Handball","Swimming","Wrestling"];
+
+$("#autocomplete").autocomplete({
+source: games
+});
+
+});
+
+></script>
 <div class="text-center" align = "center" > <i class="fa fa-youtube"></i>   G e t F o r F u n </div>
 
 <p class="example" align = "center"><font color="white">Let try <a href="https://www.youtube.com/watch?v=32sYGCOYJUM" style = "color:white">CHẠY NGAY ĐI</a> or <a href="https://www.youtube.com/watch?v=32sYGCOYJUM" style = "color:white">https://www.youtube.com/watch?v=32sYGCOYJUM</a></p>
