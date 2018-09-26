@@ -27,7 +27,7 @@ def main():
 
 
 @app.route('/result', methods=['POST','GET'])
-def resul,t():
+def result():
 	search = request.form['youtube']
 	try:
 		query_string = urllib.parse.urlencode({"search_query": search})
