@@ -13,7 +13,7 @@ year = datetime.date.today().year
 app = Flask(__name__)
 
 def make_savepath(title):
-    return os.path.join("%s.mp3" % (title))
+    return os.path.join("%s.mp3" % (title.replace("mp3","")))
 
 @app.route('/', methods=['GET'])
 def main():
@@ -27,7 +27,7 @@ def main():
 
 
 @app.route('/result', methods=['POST','GET'])
-def result():
+def resul,t():
 	search = request.form['youtube']
 	try:
 		query_string = urllib.parse.urlencode({"search_query": search})
