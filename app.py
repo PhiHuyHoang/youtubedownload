@@ -17,13 +17,7 @@ def make_savepath(title):
 
 @app.route('/', methods=['GET'])
 def main():
-	URL="http://suggestqueries.google.com/complete/search?client=firefox&q=Hel Wor"
-	headers = {'User-agent':'Mozilla/5.0'}
-	response = requests.get(URL, headers=headers)
-	result = json.loads(response.content.decode('utf-8'))
-	suggest = result[1]
-	print(suggest)
-	return render_template('index.html',year = year,suggest = suggest)
+	return render_template('index.html',year = year)
 
 
 @app.route('/result', methods=['POST','GET'])
