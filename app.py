@@ -48,12 +48,13 @@ def result():
 def download():
 	url = request.form["song"]
 	options = {
+    'verbose': True,
     'format': 'bestaudio/best',
     'outtmpl': '%(id)s.%(ext)s',
+    'noplaylist' : True,
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
-        'preferredquality': '192',
     }],
 }
 
