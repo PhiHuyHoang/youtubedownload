@@ -48,7 +48,8 @@ def result():
 def download():
 	url = request.form["song"]
 	options = {
-    'format': 'bestaudio/best'
+    'format': 'bestaudio/best',
+	'outtmpl': '%(id)s'
 }
 
 	ydl = youtube_dl.YoutubeDL(options)
