@@ -48,12 +48,7 @@ def result():
 def download():
 	url = request.form["song"]
 	options = {
-    'format': 'bestaudio/best',
-    'postprocessors': [{
-        'key': 'FFmpegExtractAudio',
-        'preferredcodec': 'mp3',
-        'preferredquality': '192',
-    }],
+    'format': 'bestaudio/best'
 }
 
 	ydl = youtube_dl.YoutubeDL(options)
