@@ -59,7 +59,7 @@ def download():
 	with ydl:
 		result = ydl.extract_info(url, download=True)
 		os.rename(result['id'], savepath)
-		print("Downloaded and converted %s successfully!" % savepath)
+		print("Downloaded and converted %s successfully!!" % savepath)
 		try:
 			return send_file(savepath,savepath, as_attachment=True)
 		except Exception as e:
