@@ -48,11 +48,14 @@ def result():
 def download():
 	url = request.form["song"]
 	options = {
-		'format': 'bestaudio/best',  # choice of quality
-		'extractaudio': True,  # only keep the audio
-		'audioformat': "mp3",  # convert to mp3
-		'outtmpl': '%(id)s',  # name the file the ID of the video
-		'noplaylist': True, }  # only download single song, not playlist
+    'format': 'bestaudio/best',
+    'outtmpl': '%(id)s.%(ext)s',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
+}
 
 	ydl = youtube_dl.YoutubeDL(options)
 	song_name = ydl.extract_info(url, download=False)
